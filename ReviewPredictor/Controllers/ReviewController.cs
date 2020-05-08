@@ -7,23 +7,17 @@ using ReviewPredictor.Model;
 namespace ReviewPredictor
 {
     [Route("[controller]")]
-    public class PredictController : Controller
+    public class ReviewController : Controller
     {
         private readonly PredictionEnginePool<ProductReview, ModelOutput> predictionEnginePool;
 
-        public PredictController(PredictionEnginePool<ProductReview, ModelOutput> predictionEnginePool)
+        public ReviewController(PredictionEnginePool<ProductReview, ModelOutput> predictionEnginePool)
         {
             this.predictionEnginePool = predictionEnginePool;
         }
 
-        // GET: /<controller>/
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-
         [HttpPost]
+        [Route("predict")]
         public bool Predict(ProductReview productReview)
         {
             return this.predictionEnginePool.Predict(productReview).Prediction;
