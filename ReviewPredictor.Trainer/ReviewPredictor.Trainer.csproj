@@ -10,10 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ReviewPredictor.Shared\ReviewPredictor.Shared.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="product_reviews.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
