@@ -26,6 +26,5 @@ jobs:
     - name: Upload model.zip
       uses: actions/upload-artifact@v2
       with:
-        name: model.zip
         path: ReviewPredictor.Trainer/model.zip
     
