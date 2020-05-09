@@ -7,8 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  TrainModel:
-  
+  TrainModel: 
     runs-on: ubuntu-latest
 
     steps:
@@ -24,3 +23,9 @@ jobs:
     - name: Train model
       working-directory: ReviewPredictor.Trainer
       run: dotnet run --project ReviewPredictor.Trainer.csproj
+    - name: Upload model.zip
+      uses: actions/upload-artifact@v1
+      with:
+        name: model.zip
+        path: \ReviewPredictor.Trainer\bin\Debug\netcoreapp3.1\model.zip      
+    
