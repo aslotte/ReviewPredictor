@@ -30,6 +30,7 @@ jobs:
         
         
   Docker:
+    needs: [TrainModel]
     runs-on: ubuntu-latest
     
     steps: 
