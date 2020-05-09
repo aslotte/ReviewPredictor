@@ -40,14 +40,10 @@ jobs:
         with:
           path: ReviewPredictor/ReviewPredictor
           
-      - name: Upload model.zip
-        uses: actions/upload-artifact@v2
-        with:
-          path: .    
       - name: Publish to Registry
         uses: mr-smithers-excellent/docker-build-push@v3
         with:
-          dockerfile: Dockerfile
+          dockerfile: ReviewPredictor/Dockerfile
           image: aslotte/reviewpredictor
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
