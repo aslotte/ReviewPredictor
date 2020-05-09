@@ -21,3 +21,5 @@ jobs:
       run: dotnet restore ReviewPredictor.Trainer/ReviewPredictor.Trainer.csproj
     - name: Build
       run: dotnet build ReviewPredictor.Trainer/ReviewPredictor.Trainer.csproj --configuration Release --no-restore
+    - name: Train model
+    - run: dotnet run --project ReviewPredictor.Trainer/ReviewPredictor.Trainer.csproj
