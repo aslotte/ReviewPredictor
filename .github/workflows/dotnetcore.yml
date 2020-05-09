@@ -26,6 +26,7 @@ jobs:
     - name: Upload model.zip
       uses: actions/upload-artifact@v2
       with:
+        name: model.zip
         path: ReviewPredictor.Trainer/model.zip
         
         
@@ -38,8 +39,13 @@ jobs:
       - name: Download model.zip
         uses: actions/download-artifact@v2
         with:
-          path: ReviewPredictor/ReviewPredictor
+          name: model.zip
+          path: ReviewPredictor/ReviewPredictor/model.zip
           
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: ReviewPredictor/ReviewPredictor/model.zip
+  
       - name: Publish to Registry
         uses: mr-smithers-excellent/docker-build-push@v3
         with:
