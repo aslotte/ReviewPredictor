@@ -40,10 +40,11 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: model.zip
-          path: ReviewPredictor/ReviewPredictor/model.zip
+          path: ReviewPredictor/model.zip
           
       - name: Display structure of downloaded files
         run: ls -R
+        working-directory: ReviewPredictor
   
       - name: Publish to Registry
         uses: mr-smithers-excellent/docker-build-push@v3
