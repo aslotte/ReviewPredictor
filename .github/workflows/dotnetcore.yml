@@ -44,6 +44,7 @@ jobs:
         uses: mr-smithers-excellent/docker-build-push@v3
         with:
           dockerfile: ReviewPredictor/Dockerfile
+          directory: ReviewPredictor
           image: aslotte/reviewpredictor
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
