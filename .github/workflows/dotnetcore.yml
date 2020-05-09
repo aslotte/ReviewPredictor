@@ -41,11 +41,7 @@ jobs:
         with:
           name: model.zip
           path: ReviewPredictor
-          
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: ReviewPredictor
-  
+
       - name: Publish to Registry
         uses: mr-smithers-excellent/docker-build-push@v3
         with:
