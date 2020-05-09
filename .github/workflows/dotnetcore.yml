@@ -38,6 +38,12 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           path: ReviewPredictor
-        
-        
+      - name: Publish to Registry
+        uses: mr-smithers-excellent/docker-build-push@v3
+        with:
+          working-directory: ReviewPredictor
+          image: aslotte/reviewpredictor
+          registry: docker.io
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
           
