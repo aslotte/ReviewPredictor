@@ -22,4 +22,4 @@ jobs:
     - name: Build
       run: dotnet build ReviewPredictor.Trainer/ReviewPredictor.Trainer.csproj --configuration Release --no-restore
     - name: Train model
-    - run: dotnet run --project ReviewPredictor.Trainer/ReviewPredictor.Trainer.csproj
+      run: dotnet run --project ReviewPredictor.Trainer/ReviewPredictor.Trainer.csproj
