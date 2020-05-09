@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  Build, Train & Test:
+  TrainModel:
   
     runs-on: ubuntu-latest
 
