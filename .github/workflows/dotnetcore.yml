@@ -27,4 +27,16 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         path: ReviewPredictor.Trainer/model.zip
+        
+        
+  Docker:
+    runs-on: ubuntu-latest
     
+    steps: 
+      - name: Download model.zip
+        uses: actions/download-artifact@v2
+        with:
+          path: ReviewPredictor
+        
+        
+          
