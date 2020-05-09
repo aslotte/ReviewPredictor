@@ -27,5 +27,5 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: model.zip
-        path: \ReviewPredictor.Trainer\bin\Debug\netcoreapp3.1\model.zip      
+        path: ReviewPredictor.Trainer/bin/Release/netcoreapp3.1/model.zip      
     
