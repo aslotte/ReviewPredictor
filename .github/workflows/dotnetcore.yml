@@ -42,7 +42,8 @@ jobs:
       - name: Publish to Registry
         uses: mr-smithers-excellent/docker-build-push@v3
         with:
-          working-directory: ReviewPredictor
+          directory: ReviewPredictor
+          dockerfile: Dockerfile
           image: aslotte/reviewpredictor
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
