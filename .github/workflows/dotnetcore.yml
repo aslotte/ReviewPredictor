@@ -24,8 +24,8 @@ jobs:
       working-directory: ReviewPredictor.Trainer
       run: dotnet run --project ReviewPredictor.Trainer.csproj
     - name: Upload model.zip
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v2
       with:
         name: model.zip
-        path: ReviewPredictor.Trainer/bin/Release/netcoreapp3.1/model.zip      
+        path: .
     
