@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="sentimentClassifier.zip">
+    <None Update="model.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
