@@ -73,6 +73,6 @@ jobs:
           registry-password: ${{ secrets.DOCKER_PASSWORD }}
           name: reviewpredictor
           location: 'east us'
-          restart-policy: "OnFailure"
+          restart-policy: 'OnFailure'
           
           
