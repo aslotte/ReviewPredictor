@@ -53,26 +53,3 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           
-  DeployImage: 
-    needs: [TrainModel, BuildPushImage]
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: 'Login via Azure CLI'
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-                
-      - name: 'Deploy to Azure Container Instances'
-        uses: 'azure/aci-deploy@v1'
-        with:
-          resource-group: ${{ secrets.RESOURCE_GROUP }}
-          dns-name-label: ${{ secrets.CONTAINER_URL }}
-          image: aslotte/reviewpredictor:latest
-          registry-login-server: docker.io
-          registry-username: ${{ secrets.DOCKER_USERNAME }}
-          registry-password: ${{ secrets.DOCKER_PASSWORD }}
-          name: reviewpredictorcontainer
-          location: 'east us'
-
-          
