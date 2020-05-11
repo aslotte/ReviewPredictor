@@ -57,6 +57,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: 'Login via Azure CLI'
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+                
       - name: 'Deploy to Azure Container Instances'
         uses: 'azure/aci-deploy@v1'
         with:
@@ -66,6 +71,6 @@ jobs:
           registry-login-server: docker.io
           registry-username: ${{ secrets.DOCKER_USERNAME }}
           registry-password: ${{ secrets.DOCKER_PASSWORD }}
-          name: aci-sampleapp
-          location: 'west us'
+          name: mlnet
+          location: 'east us'
           
