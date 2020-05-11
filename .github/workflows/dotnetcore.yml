@@ -52,7 +52,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           
-  Deploy Image: 
+  DeployImage: 
     needs: [TrainModel, BuildPushImage]
     runs-on: ubuntu-latest
     
