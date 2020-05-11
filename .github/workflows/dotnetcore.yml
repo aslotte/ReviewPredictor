@@ -66,10 +66,11 @@ jobs:
         uses: 'azure/aci-deploy@v1'
         with:
           resource-group: ${{ secrets.RESOURCE_GROUP }}
+          dns-name-label: ${{ secrets.CONTAINER_URL }}
           image: aslotte/reviewpredictor:${{ github.sha }}
           registry-login-server: docker.io
           registry-username: ${{ secrets.DOCKER_USERNAME }}
           registry-password: ${{ secrets.DOCKER_PASSWORD }}
-          name: mlnet
+          name: reviewpredictor
           location: 'east us'
           
