@@ -71,8 +71,7 @@ jobs:
           registry-login-server: docker.io
           registry-username: ${{ secrets.DOCKER_USERNAME }}
           registry-password: ${{ secrets.DOCKER_PASSWORD }}
-          name: reviewpredictor
+          name: reviewpredictorcontainer
           location: 'east us'
-          restart-policy: 'OnFailure'
-          
+
           
