@@ -47,7 +47,7 @@ jobs:
         with:
           dockerfile: ReviewPredictor/Dockerfile
           directory: ReviewPredictor
-          image: aslotte/reviewpredictor
+          image: aslotte/reviewpredictor:${{ github.sha }}
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
