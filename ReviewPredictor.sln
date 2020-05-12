@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewPredictor", "ReviewPr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewPredictor.Trainer", "ReviewPredictor.Trainer\ReviewPredictor.Trainer.csproj", "{33E0AB5C-9253-4273-8351-592D0493E547}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviewPredictor.DataTests", "ReviewPredictor.DataTests\ReviewPredictor.DataTests.csproj", "{55F8B910-0D7C-4DE3-99A2-EEE269532310}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{33E0AB5C-9253-4273-8351-592D0493E547}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33E0AB5C-9253-4273-8351-592D0493E547}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33E0AB5C-9253-4273-8351-592D0493E547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55F8B910-0D7C-4DE3-99A2-EEE269532310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55F8B910-0D7C-4DE3-99A2-EEE269532310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55F8B910-0D7C-4DE3-99A2-EEE269532310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55F8B910-0D7C-4DE3-99A2-EEE269532310}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
