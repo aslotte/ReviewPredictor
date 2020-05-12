@@ -15,7 +15,7 @@ namespace ReviewPredictor.DataTests
             var mlContext = new MLContext(seed: 1);
 
             //Act
-            IDataView dataView = mlContext.Data.LoadFromTextFile<ProductReview>("product_reviews.csv", hasHeader: true, separatorChar: ',');
+            IDataView dataView = mlContext.Data.LoadFromTextFile<ProductReview>(@"..\..\..\..\ReviewPredictor.Trainer\product_reviews.csv", hasHeader: true, separatorChar: ',');
 
             dataView.Preview();
 
