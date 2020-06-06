@@ -36,7 +36,7 @@ jobs:
       run: dotnet build ReviewPredictor.Trainer/ReviewPredictor.Trainer.csproj --configuration Release --no-restore
     - name: Train model
       working-directory: ReviewPredictor.Trainer
-      run: dotnet run --project ReviewPredictor.Trainer.csproj
+      run: dotnet run --project ReviewPredictor.Trainer.csproj ${{ secrets.AZURE_STORAGE }}
     - name: Upload model.zip
       uses: actions/upload-artifact@v2
       with:
