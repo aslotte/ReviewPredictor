@@ -154,3 +154,4 @@ ReviewPredictor.Trainer/Properties/launchSettings.json
 ReviewPredictor/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
 ReviewPredictor.Trainer/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
 ReviewPredictor.DataTests/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+
